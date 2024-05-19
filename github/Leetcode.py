@@ -116,17 +116,36 @@ print(a.items())'''
 
 
         
-from collections import Counter
-o = '-+12'
-p = []
-for i in o:
-    if(ord(i)< 48 and ord(i) != 45 or ord(i)>57 or ord == ' '):continue
-    p.append(i)
-print(p)
-print(int(''.join(p)))
+# from collections import Counter
+# o = '-+12'
+# p = []
+# for i in o:
+#     if(ord(i)< 48 and ord(i) != 45 or ord(i)>57 or ord == ' '):continue
+#     p.append(i)
+# print(p)
+# print(int(''.join(p)))
 
 
 
+def http_error(status):
+    match status:
+        case 400:
+            return "Bad request"
+        case 404:
+            return "Not found"
+        case 418:
+            return "I'm a teapot"
+        case _:
+            return "Something's wrong with the internet"
+print(http_error(400))
+
+
+def o(n):
+    if(n==0):
+        return 1
+    return 2*o(n-1)+1
+
+print(o(3))
 
 
 
